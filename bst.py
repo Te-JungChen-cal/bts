@@ -18,7 +18,7 @@ class Node:
         return self
 
     def search(self, value):
-         # O(n)
+         # O(logn)
         def helper(node):
             if node == None:
                 return False
