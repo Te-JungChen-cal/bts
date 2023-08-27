@@ -24,7 +24,9 @@ class Node:
                 return False
             if node.value == value:
                 return True
-            return helper(node.left) or helper(node.right)
+            if value < node.value:
+                return helper(node.left)
+            return helper(node.right)
        
         return helper(self)
         
